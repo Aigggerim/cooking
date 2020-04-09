@@ -1,0 +1,21 @@
+<div class="details">
+    <div class="details_img"><img src="{{recipe.mainImage}}" alt=""></div>
+    <div class="details_title">{{recipe.title}}</div>
+    <div class="details_description">{{recipe.description}}</div>
+    <div class="details_author">{{recipe.author}}</div>
+</div>
+<div class="details_text">
+    <div class="title">Ингредиенты</div>
+    <div class="details_ingredients">
+        <div *ngFor="let i of ingredientList">
+            {{i}}
+        </div>
+    </div>
+    <div class="title">Шаги</div>
+    <div class="details_steps">
+        <div *ngFor="let s of steps">
+            {{steps.indexOf(s) + 1}}.
+            {{s}}
+        </div>
+    </div>
+</div>

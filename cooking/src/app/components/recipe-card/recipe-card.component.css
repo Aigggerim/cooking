@@ -1,0 +1,26 @@
+.recipe {
+    display: grid;
+    max-width: 300px;
+    cursor: pointer;
+    border: 1px solid #c4c4c4;
+}
+.recipe_img {
+    width: 300px;
+}
+.recipe_img img {
+    max-width: 100%;
+}
+.recipe_title {
+    font-size: 18px;
+}
+.recipe_description {
+    font-size: 14px;
+    padding: 1rem 0;
+    color: #585858;
+}
+.recipe_author {
+    font-size: 14px;
+}
+.text {
+    padding: 1rem;
+}

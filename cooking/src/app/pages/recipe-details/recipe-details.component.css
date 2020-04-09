@@ -1,0 +1,36 @@
+.details {
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    border-bottom: 1px solid #b4b4b4;
+}
+.details_title {
+    font-size: 20px;
+}
+.details_description {
+    color: #4b4b4b;   
+    margin-top: 1rem;
+}
+.details_author {
+    font-size: 14px;
+}
+.title {
+    font-size: 20px;
+}
+.details_text {
+    padding: 1rem;
+}
+.details_ingredients {
+    padding-bottom: 1rem;
+}
+.details_ingredients, .details_steps {
+    margin-top: 0.5rem;
+}
+@media(max-width: 800px) {
+    .details{
+        justify-content: start;
+    }
+    img {
+        width: 300px;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="header">
+    <div class="header_logo">COOKING</div>
+    <div class="header_text">Все твои рецепты в одном месте</div>
+    <div class="header_create"><button routerLink="/create-recipe">+ Создать рецепт</button></div>
+</div>
+<div class="recipe-list">
+    <div *ngFor="let r of recipeList">
+        <app-recipe-card [recipe]="r"></app-recipe-card>
+    </div>
+</div>
