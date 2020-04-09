@@ -1,0 +1,22 @@
+.admin {
+    display: grid;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    grid-template-rows: auto 1fr;
+    left: 0;
+    align-items: flex-start;
+    background: #fff;
+}
+.title {
+    font-size: 20px;
+    padding: 1rem;
+}
+.recipe-list_item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-top: 1px solid #d4d4d4;
+    align-items: center;
+    padding: 1rem;
+}

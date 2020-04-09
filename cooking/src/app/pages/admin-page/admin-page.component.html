@@ -1,0 +1,11 @@
+<div class="admin">
+    <div class="title">Админ панель</div>
+    <div class="recipe-list">
+        <div *ngFor="let l of list">
+            <div class="recipe-list_item">
+                {{l.title}}
+                <button>delete</button>
+            </div>
+        </div>
+    </div>
+</div>

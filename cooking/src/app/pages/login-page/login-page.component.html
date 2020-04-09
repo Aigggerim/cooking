@@ -1,0 +1,36 @@
+<div class="login">
+    <div *ngIf="login == true">
+        <form>
+            <div class="title">Войти</div>
+            <div class="item">
+                <div class="label">E-mail</div>
+                <input type="text">
+            </div>
+            <div class="item">
+                <div class="label">Пароль</div>
+                <input type="password">
+            </div>
+            <button>Войти</button>
+            <div class="switch" (click)="login = false">Зарегистрироватся</div>
+        </form>
+    </div>
+    <div *ngIf="login == false">
+        <form>
+            <div class="title">Зарегистрироватся</div>
+            <div class="item">
+                <div class="label">E-mail</div>
+                <input type="text">
+            </div>
+            <div class="item">
+                <div class="label">Пароль</div>
+                <input type="password">
+            </div>
+            <div class="item">
+                <div class="label">Подтвердить пароль</div>
+                <input type="password">
+            </div>
+            <button>Зарегистрироватся</button>
+            <div class="switch" (click)="login = true">Войти</div>
+        </form>
+    </div>
+</div>
