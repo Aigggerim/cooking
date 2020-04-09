@@ -3,24 +3,24 @@
         <div class="title">Добавь свой рецепт тут!</div>
         <div class="item">
             <div class="label">Title</div>
-            <input type="text">
+            <input type="text" name="name" [(ngModel)]="ngModel.name">
         </div>
         <div class="item">
             <div class="label">Image URL</div>
-            <input type="text">
+            <input type="text" name="image" [(ngModel)]="ngModel.image">
         </div>
         <div class="item">
             <div class="label">Description</div>
-            <input type="text">
+            <input type="text" name="description" [(ngModel)]="ngModel.description">
         </div>
         <div class="item">
             <div class="label">Ingredients</div>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" name="ingredients" [(ngModel)]="ngModel.ingredients"></textarea>
         </div>
         <div class="item">
             <div class="label">Steps</div>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" name="steps" [(ngModel)]="ngModel.steps"></textarea>
         </div>
-        <button>Create new</button>
+        <button (click)="onCreate()">Create new</button>
     </form>
 </div>

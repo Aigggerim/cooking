@@ -4,13 +4,13 @@
             <div class="title">Войти</div>
             <div class="item">
                 <div class="label">E-mail</div>
-                <input type="text">
+                <input type="text" name="email" [(ngModel)]="NgModel.email">
             </div>
             <div class="item">
                 <div class="label">Пароль</div>
-                <input type="password">
+                <input type="password" name="password" [(ngModel)]="NgModel.password">
             </div>
-            <button>Войти</button>
+            <button (click)="onClick()">Войти</button>
             <div class="switch" (click)="login = false">Зарегистрироватся</div>
         </form>
     </div>
@@ -19,17 +19,17 @@
             <div class="title">Зарегистрироватся</div>
             <div class="item">
                 <div class="label">E-mail</div>
-                <input type="text">
+                <input type="text" name="email" [(ngModel)]="NgModel.email">
             </div>
             <div class="item">
                 <div class="label">Пароль</div>
-                <input type="password">
+                <input type="password" name="password" [(ngModel)]="NgModel.password">
             </div>
             <div class="item">
                 <div class="label">Подтвердить пароль</div>
-                <input type="password">
+                <input type="password" name="secondpassword" [(ngModel)]="NgModel.secondpassword">
             </div>
-            <button>Зарегистрироватся</button>
+            <button (click)="onRegisterClick()">Зарегистрироватся</button>
             <div class="switch" (click)="login = true">Войти</div>
         </form>
     </div>
