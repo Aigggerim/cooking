@@ -4,8 +4,38 @@
         <div *ngFor="let l of list">
             <div class="recipe-list_item">
                 {{l.title}}
-                <button>delete</button>
+                <button (click)="onDelete(l.id)">delete</button>
+                <button (click)="onEdit(l.id)">edit</button>
             </div>
         </div>
+    </div>
+    <div *ngIf="updatable">
+        <form>
+            <div class="item">
+                <div class="label">Title</div>
+                <input type="text" name="name" [(ngModel)]="ngModel.name">
+            </div>
+            <div class="item">
+                <div class="label">Image URL</div>
+                <input type="text" name="image" [(ngModel)]="ngModel.image">
+            </div>
+            <div class="item">
+                <div class="label">Description</div>
+                <input type="text" name="description" [(ngModel)]="ngModel.description">
+            </div>
+            <div class="item">
+                <div class="label">Ingredients</div>
+                <textarea name="" id="" cols="30" rows="10" name="ingredients" [(ngModel)]="ngModel.ingredients"></textarea>
+            </div>
+            <div class="item">
+                <div class="label">Steps</div>
+                <textarea name="" id="" cols="30" rows="10" name="steps" [(ngModel)]="ngModel.steps"></textarea>
+            </div>
+            <div class="item">
+                <div class="label">Author</div>
+                <textarea name="" id="" cols="30" rows="10" name="author" [(ngModel)]="ngModel.author"></textarea>
+            </div>
+            <button (click)="onUpdate()">Edit</button>
+        </form>
     </div>
 </div>

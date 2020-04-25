@@ -1,9 +1,12 @@
 export interface IRecipe {
-    id: string,
+    id: number,
     mainImage: string,
     title: string,
     description: string,
-    author: string,
+    author: {
+        id: number,
+        name: string
+    },
     ingredients: string,
-    steps: string
+    steps: string,
 }

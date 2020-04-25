@@ -13,13 +13,28 @@ export class RecipeDetailsComponent implements OnInit {
   public recipe
   public ingredientList = []
   public steps = []
+  public commentList = []
   ngOnInit(): void {
     this.recipeService.getRecipe()
       .subscribe(data => {
-        this.recipe = data.find(o => o.id == this.id)
-        this.ingredientList = this.recipe.ingredients
-        this.steps = this.recipe.steps
+        this.recipe = data.find(o => o.id == parseInt(this.id))
+        this.ingredientList = this.recipe.ingredients.split(',')
+        this.steps = this.recipe.steps.split('.')
       })
+    this.recipeService.getCommnets().subscribe(
+      commets => {this.commentList = commets}
+    )
+  }
+
+  public commentData = {
+    name: '',
+    text: '',
+    id: 0
+  }
+
+  leave() {
+    this.commentData.id = parseInt(this.id)
+    this.recipeService.setCommnet(this.commentData).subscribe()
   }
 
 }

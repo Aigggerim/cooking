@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -13,7 +12,7 @@ export class LoginPageComponent implements OnInit {
   public login: boolean = true
 
   NgModel = {
-    email: '',
+    username: '',
     password: '',
     secondpassword: ''
   }
@@ -22,7 +21,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   onClick(): void {
-    this.auth.Login(this.NgModel)
+    this.auth.Login(this.NgModel).subscribe()
   }
 
   onRegisterClick(): void {

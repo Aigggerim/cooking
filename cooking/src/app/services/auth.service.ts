@@ -10,16 +10,16 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  private api = 'api'
+  private api = 'http://localhost:8000/api/'
   private headers = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json '})
   }
 
   Register(user): Observable<User> {
-    return this.http.post<User>(this.api+'register', user, this.headers)
+    return this.http.post<User>(this.api+'register/', user, this.headers)
   }
 
   Login(user): Observable<User> {
-    return this.http.post<User>(this.api+'login', user, this.headers)
+    return this.http.post<User>(this.api+'login/', user, this.headers)
   }
 }

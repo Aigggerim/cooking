@@ -11,17 +11,19 @@ export class CreateRecipeComponent implements OnInit {
   constructor(private recipeService: RecipeService) { }
 
   ngModel = {
-    title: '',
+    id: 0,
+    name: '',
     image: '',
     description: '',
     ingredients: '',
-    steps: ''
+    steps: '',
+    author: ''
   }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
-    this.recipeService.set(this.ngModel)
+    this.recipeService.set(this.ngModel).subscribe()
   }
 }
